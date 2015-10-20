@@ -29,6 +29,7 @@
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int ledPin =  12;// the number of the LED pin
 const int ledPin2 = 8;
+const int ledPin3 = 7;
 
 // variables will change:
 int buttonState = 0;         // variable for reading the pushbutton status
@@ -37,6 +38,7 @@ void setup() {
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
   pinMode(ledPin2,OUTPUT);
+  pinMode(ledPin3, OUTPUT);
   // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
 }
@@ -51,10 +53,12 @@ void loop() {
     // turn LED on:
     digitalWrite(ledPin, HIGH);
     digitalWrite(ledPin2, LOW);
-    delay(1000);
+    digitalWrite(ledPin3, HIGH);
+    delay(100);
     digitalWrite(ledPin, LOW);
     digitalWrite(ledPin2, HIGH);
-    delay(1000);
+    digitalWrite(ledPin3, LOW);
+    delay(100);
   }
   else {
     // turn LED off:
